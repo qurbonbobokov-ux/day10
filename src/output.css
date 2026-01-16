@@ -175,9 +175,6 @@
   .mt-150 {
     margin-top: calc(var(--spacing) * 150);
   }
-  .mt-\[0px\] {
-    margin-top: 0px;
-  }
   .mt-\[30px\] {
     margin-top: 30px;
   }
@@ -207,9 +204,6 @@
   }
   .hidden {
     display: none;
-  }
-  .table {
-    display: table;
   }
   .h-\[52px\] {
     height: 52px;
@@ -277,12 +271,6 @@
   .max-w-\[1440px\] {
     max-width: 1440px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -313,9 +301,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-\[5px\] {
-    gap: 5px;
-  }
   .gap-\[10px\] {
     gap: 10px;
   }
@@ -334,21 +319,8 @@
   .gap-\[50px\] {
     gap: 50px;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
-  }
-  .rounded-4xl {
-    border-radius: var(--radius-4xl);
-  }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-\[2px\] {
     border-style: var(--tw-border-style);
@@ -367,53 +339,17 @@
   .bg-\[white\] {
     background-color: white;
   }
-  .bg-\[url\(\)\] {
-    background-image: url();
+  .bg-\[url\(\.\/\.png\)\] {
+    background-image: url(./.png);
   }
-  .bg-\[url\(\.\/\)\] {
-    background-image: url(./);
-  }
-  .bg-\[url\(\.\/Dark\.png\)\] {
-    background-image: url(./Dark.png);
-  }
-  .bg-\[url\(\.\/daimage\.png\)\] {
-    background-image: url(./daimage.png);
-  }
-  .bg-\[url\(\.\/dark\.png\)\] {
-    background-image: url(./dark.png);
-  }
-  .bg-\[url\(\.\/image\.png\)\] {
-    background-image: url(./image.png);
+  .bg-\[url\(\.\/07\.png\)\] {
+    background-image: url(./07.png);
   }
   .bg-\[url\(\.\/image2\.png\)\] {
     background-image: url(./image2.png);
   }
   .bg-\[url\(\.\/image5\.jpg\)\] {
     background-image: url(./image5.jpg);
-  }
-  .bg-\[url\(\.\/s\)\] {
-    background-image: url(./s);
-  }
-  .bg-\[url\(\.\/src\/Dark\.png\)\] {
-    background-image: url(./src/Dark.png);
-  }
-  .bg-\[url\(\.\/src\/dark\.png\)\] {
-    background-image: url(./src/dark.png);
-  }
-  .bg-\[url\(\.\/srcDark\.png\)\] {
-    background-image: url(./srcDark.png);
-  }
-  .bg-\[url\(\.\/srcdark\.png\)\] {
-    background-image: url(./srcdark.png);
-  }
-  .bg-\[url\(D\.png\)\] {
-    background-image: url(D.png);
-  }
-  .bg-\[url\(Dar\.png\)\] {
-    background-image: url(Dar.png);
-  }
-  .bg-\[url\(Dark\.png\)\] {
-    background-image: url(Dark.png);
   }
   .bg-\[url\(Dark2\.png\)\] {
     background-image: url(Dark2.png);
@@ -430,26 +366,8 @@
   .bg-\[url\(Dark6\.png\)\] {
     background-image: url(Dark6.png);
   }
-  .bg-\[url\(ark\.png\)\] {
-    background-image: url(ark.png);
-  }
-  .bg-\[url\(d\.png\)\] {
-    background-image: url(d.png);
-  }
-  .bg-\[url\(da\.png\)\] {
-    background-image: url(da.png);
-  }
-  .bg-\[url\(dark\)\] {
-    background-image: url(dark);
-  }
-  .bg-\[url\(dark\.p\)\] {
-    background-image: url(dark.p);
-  }
   .bg-\[url\(dark\.png\)\] {
     background-image: url(dark.png);
-  }
-  .bg-\[url\(dark4\.png\)\] {
-    background-image: url(dark4.png);
   }
   .bg-\[url\(image\.png\)\] {
     background-image: url(image.png);
@@ -555,6 +473,9 @@
   .text-\[\#000000B2\] {
     color: #000000B2;
   }
+  .text-\[\#000000B2white\] {
+    color: #000000B2white;
+  }
   .text-\[\#219EBC\] {
     color: #219EBC;
   }
@@ -576,8 +497,14 @@
   .text-\[\#FFFFFFB2\] {
     color: #FFFFFFB2;
   }
+  .text-\[\#FFFFFFCC\] {
+    color: #FFFFFFCC;
+  }
   .text-\[\#FFFFFF\] {
     color: #FFFFFF;
+  }
+  .text-\[px\] {
+    color: px;
   }
   .text-\[white\] {
     color: white;
@@ -587,13 +514,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .lg\:m-0 {
     @media (width >= 64rem) {
@@ -675,6 +595,16 @@
       gap: 21px;
     }
   }
+  .lg\:bg-\[url\(\.\/0\.png\)\] {
+    @media (width >= 64rem) {
+      background-image: url(./0.png);
+    }
+  }
+  .lg\:bg-\[url\(\.\/07\.png\)\] {
+    @media (width >= 64rem) {
+      background-image: url(./07.png);
+    }
+  }
   .lg\:bg-\[url\(\.\/image\.png\)\] {
     @media (width >= 64rem) {
       background-image: url(./image.png);
@@ -725,17 +655,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
