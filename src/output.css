@@ -7,15 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
-    --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -205,11 +204,20 @@
   .hidden {
     display: none;
   }
+  .h-\[3px\] {
+    height: 3px;
+  }
+  .h-\[12px\] {
+    height: 12px;
+  }
   .h-\[52px\] {
     height: 52px;
   }
   .h-\[100\%\] {
     height: 100%;
+  }
+  .h-\[120px\] {
+    height: 120px;
   }
   .h-\[132px\] {
     height: 132px;
@@ -219,6 +227,15 @@
   }
   .h-\[400px\] {
     height: 400px;
+  }
+  .h-\[450px\] {
+    height: 450px;
+  }
+  .h-\[500px\] {
+    height: 500px;
+  }
+  .h-\[550px\] {
+    height: 550px;
   }
   .h-\[717px\] {
     height: 717px;
@@ -319,8 +336,18 @@
   .gap-\[50px\] {
     gap: 50px;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-\[2px\] {
     border-style: var(--tw-border-style);
@@ -339,8 +366,8 @@
   .bg-\[white\] {
     background-color: white;
   }
-  .bg-\[url\(\.\/\.png\)\] {
-    background-image: url(./.png);
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
   }
   .bg-\[url\(\.\/07\.png\)\] {
     background-image: url(./07.png);
@@ -380,6 +407,9 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -422,6 +452,9 @@
   }
   .text-end {
     text-align: end;
+  }
+  .text-\[13px\] {
+    font-size: 13px;
   }
   .text-\[18px\] {
     font-size: 18px;
@@ -473,8 +506,11 @@
   .text-\[\#000000B2\] {
     color: #000000B2;
   }
-  .text-\[\#000000B2white\] {
-    color: #000000B2white;
+  .text-\[\#000000\] {
+    color: #000000;
+  }
+  .text-\[\#00000066\] {
+    color: #00000066;
   }
   .text-\[\#219EBC\] {
     color: #219EBC;
@@ -503,9 +539,6 @@
   .text-\[\#FFFFFF\] {
     color: #FFFFFF;
   }
-  .text-\[px\] {
-    color: px;
-  }
   .text-\[white\] {
     color: white;
   }
@@ -514,6 +547,28 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[\#0000001A\] {
+    --tw-shadow-color: #0000001A;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, #0000001A var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[gray\] {
+    --tw-shadow-color: gray;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, gray var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-\[white\] {
+    --tw-shadow-color: white;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, white var(--tw-shadow-alpha), transparent);
+    }
   }
   .lg\:m-0 {
     @media (width >= 64rem) {
@@ -595,11 +650,6 @@
       gap: 21px;
     }
   }
-  .lg\:bg-\[url\(\.\/0\.png\)\] {
-    @media (width >= 64rem) {
-      background-image: url(./0.png);
-    }
-  }
   .lg\:bg-\[url\(\.\/07\.png\)\] {
     @media (width >= 64rem) {
       background-image: url(./07.png);
@@ -655,11 +705,90 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
     }
   }
 }
